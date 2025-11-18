@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"flag"
+	"fmt"
+)
 
-func ADD(a, b int) int {
+func CliADD(a, b int) int {
 	return a + b
 
 }
@@ -23,10 +26,8 @@ func DIV(a, b int) int {
 }
 
 func main() {
-	result := ADD(5, 6)
-	fmt.Println(result)
-	fmt.Println(SUB(5, 6))
-	fmt.Println(MUL(5, 6))
-	fmt.Println(DIV(5, 6))
+	a := flag.Int("a", 0, "number 1")
+	b := flag.Int("b", 0, "number 2")
+	fmt.Println(CliADD(*a, *b))
 
 }
