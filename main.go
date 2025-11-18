@@ -10,9 +10,15 @@ func CliADD(a, b int) int {
 
 }
 
+func CliSUB(a, b int) int {
+	return a - b
+
+}
+
 func main() {
 	a := flag.Int("a", 0, "number 1")
 	b := flag.Int("b", 0, "number 2")
 	fmt.Println(CliADD(*a, *b))
+	fmt.Println(CliSUB(*a, *b))
 
 }
