@@ -30,7 +30,7 @@ func CliDIV(a, b int) int {
 
 func main() {
 	a := flag.Int("a", 0, "number 1")
-	b := flag.Int("b", 0, "number 2")
+	b := flag.Int("a", 0, "number 2")
 	fmt.Println(CliADD(*a, *b))
 	fmt.Println(CliSUB(*a, *b))
 	fmt.Println(CliMUL(*a, *b))
